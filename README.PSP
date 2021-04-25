@@ -1,0 +1,26 @@
+PMP(PSP Media Player) 0.0.5
+
+This player is based on ffplay in ffmpeg library.
+Actually I didn't make much change on the library source.
+Thank's to ffmpeg team and many other developers of sourced I reffered.
+
+Have fun.
+
+To build:
+1. change to libogg-1.1.2
+2. make
+3. make install
+4. run make in libavcodec, libavformat, libavutil
+5. change to ffplay_resample
+6. make
+7. make kxploit
+8. copy PMP and PMP% to your PSP
+
+(see Makefile in ffplay_resample for all required libs)
+
+
+PMP(PSP Media Player) 0.0.5 MoD
+
+PIX_FMT_YUV420P -> PIX_FMT_RGBA32 is now done in asm + me
+(restrictions on the input: (width % 8) == 0 && (height % 4) == 0)
+(no check for output != PIX_FMT_YUV420P - :P )
